@@ -1,0 +1,17 @@
+base
+bitops
+digest
+ggplot2
+igraph
+knitr
+lubridate
+plyr
+RColorBrewer
+RCurl
+rjson
+RJSONIO
+ROAuth
+Snowball
+stringr
+tm
+twitteR

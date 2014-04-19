@@ -1,0 +1,73 @@
+```{r setup, echo=FALSE}
+
+opts_chunk$set(fig.align='center', fig.width=9, fig.height=7, cache=TRUE, results='hide', warning=FALSE, echo=FALSE, error=FALSE, comment=FALSE,message=FALSE)
+```
+
+```{r, results='hide'}
+
+source("psa14_tweets.R")
+
+```
+
+
+# Test Title
+
+Time-series graph should be here.
+```{r, fig.cap="30-minute intervals"}
+time.series
+```
+
+Counts graph should be here.
+```{r}
+frequencies
+```
+
+Retweets should be here.
+```{r}
+retweets
+```
+
+Ratios should be here.
+```{r}
+ratios
+```
+
+Network graph should be here.
+```{r, fig.height=10, fig.width=10}
+plot.igraph(rt_graph2, layout=layout.fruchterman.reingold, main="#PSA14 Retweet Network")
+```
+
+Links should be here.
+```{r}
+links
+```
+
+Key accounts graph should be here.
+```{r, fig.align='center'}
+key.accounts
+```
+
+Sentiment plot, just a histogram of sentiment scores for all tweets
+```{r, fig.align='center'}
+sentiment.plot
+```
+
+How did the tone change throughout the day, on average?
+```{r, fig.align='center'}
+sentiment.day.plot
+```
+
+How did the tone change throughout the entire conference, on average?
+```{r, fig.align='center'}
+sentiment.time.weighted
+```
+
+Network Graphs
+```{r, fig.align='center', fig.height=10, fig.width=10}
+
+par(bg="white", mar=c(1,1,1,1))
+plot(g, layout=glay)
+title("\nNetwork Graph of Tweets from #PSA14",
+    col.main="gray40", cex.main=1.5)
+
+```

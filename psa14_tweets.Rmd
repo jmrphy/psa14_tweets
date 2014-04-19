@@ -10,7 +10,11 @@ source("psa14_tweets.R")
 ```
 
 
-# Test Title
+# Reviewing the 2014 Political Studies Conference with Twitter Data
+
+What were the most talked-about issues during the 2014 Political Studies Conference last week? How are those issues connected? How many attendees used Twitter? How was that communication network structured? How did sentiment change over time throughout the conference?
+
+To get some traction on questions such as these, below I analyze all the tweets containing the hashtag #PSA14 between Monday April 14 (roughly 9 a.m.) until Wednesday April 16th (roughly 8 p.m.) to answer some of these questions. As with all social media data, these analyses are almost certainly not representative of the whole population of attendees. 
 
 Time-series graph should be here.
 ```{r, fig.cap="30-minute intervals"}

@@ -22,6 +22,7 @@ require(ggplot2)
 require(tm)
 require(Snowball)
 require(RColorBrewer)
+require(stargazer)
 
 
 # These two lines below download the tweets (1500 max) and convert to dataframe
@@ -223,6 +224,15 @@ corp <- tm_map(corp, removeWords, other_stop_words)   # remove specific word (th
 
 dtm <-DocumentTermMatrix(corp) # make a matrix of each document by every single term
 dtm <- removeSparseTerms(dtm, 0.99)
+
+terms<-as.data.frame(sort(colSums(inspect(dtm)), decreasing=TRUE))
+terms$Term <- rownames(terms)
+names(terms)<-c("Frequency", "Term")
+rownames(terms) = NULL
+terms[1:50,1:2]
+
+
+
 
 #set.seed(666)
 #wss <- (nrow(dtm)-1)*sum(apply(dtm,2,var), na.rm=TRUE)
